@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Gameplay" id="BYZ-38-t0r" customClass="ViewController" customModule="Martogame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="DCs-uQ-WGg">
+                                <rect key="frame" x="-448" y="-43" width="1792" height="501"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0m0-6r-NQ3">
+                                <rect key="frame" x="47" y="26" width="120" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbR-MO-L4p">
+                                <rect key="frame" x="47" y="0.0" width="120" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SHOOTER.png" id="dZ0-nw-iOX" customClass="DragImageView" customModule="Martogame" customModuleProvider="target">
+                                <rect key="frame" x="47" y="147" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <viewLayoutGuide key="safeArea" id="gIQ-rX-pxe"/>
+                    </view>
+                    <connections>
+                        <outlet property="score" destination="hbR-MO-L4p" id="LpZ-AJ-5FJ"/>
+                        <outlet property="shooter" destination="dZ0-nw-iOX" id="Y5q-O1-HLW"/>
+                        <outlet property="timerLabel" destination="0m0-6r-NQ3" id="KJy-NK-9UR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.26785714285714" y="134.78260869565219"/>
+        </scene>
+        <!--Replay-->
+        <scene sceneID="6gE-TW-hO0">
+            <objects>
+                <viewController storyboardIdentifier="GameOverPlay" id="92I-YY-SR5" userLabel="Replay" customClass="PauseVC" customModule="Martogame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="z4o-6f-OoF">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R73-UO-lxP">
+                                <rect key="frame" x="183.5" y="80" width="300" height="225"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PfD-wU-ifd">
+                                        <rect key="frame" x="75" y="60" width="88.5" height="9"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="88.333333333333314" id="NmS-vr-To9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnw-mA-phk">
+                                        <rect key="frame" x="90" y="123" width="120" height="56"/>
+                                        <state key="normal" image="replay.png"/>
+                                        <connections>
+                                            <action selector="Replaybutton:" destination="z4o-6f-OoF" eventType="touchUpInside" id="Il6-Ey-mVb"/>
+                                            <action selector="replayPressed:" destination="92I-YY-SR5" eventType="touchUpInside" id="0BY-Mc-RFt"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAL-wb-a22" userLabel="RepScore">
+                                        <rect key="frame" x="163.5" y="51.5" width="14" height="26"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="PfD-wU-ifd" firstAttribute="top" secondItem="R73-UO-lxP" secondAttribute="top" constant="59.999999999999993" id="2nj-QB-6Ex"/>
+                                    <constraint firstItem="jnw-mA-phk" firstAttribute="height" secondItem="R73-UO-lxP" secondAttribute="height" multiplier="0.25" id="3r5-Ad-cya"/>
+                                    <constraint firstItem="vAL-wb-a22" firstAttribute="leading" secondItem="PfD-wU-ifd" secondAttribute="trailing" id="5yR-RB-fKC"/>
+                                    <constraint firstItem="jnw-mA-phk" firstAttribute="top" secondItem="PfD-wU-ifd" secondAttribute="bottom" constant="54.000000000000028" id="Dhi-Zf-J1Y"/>
+                                    <constraint firstItem="jnw-mA-phk" firstAttribute="width" secondItem="R73-UO-lxP" secondAttribute="height" multiplier="8:15" id="QfU-MK-dY8"/>
+                                    <constraint firstItem="PfD-wU-ifd" firstAttribute="centerY" secondItem="vAL-wb-a22" secondAttribute="centerY" id="Vai-Wr-VC9"/>
+                                    <constraint firstAttribute="bottom" secondItem="jnw-mA-phk" secondAttribute="bottom" constant="46" id="aNc-ov-ebk"/>
+                                    <constraint firstItem="PfD-wU-ifd" firstAttribute="leading" secondItem="R73-UO-lxP" secondAttribute="leading" constant="75" id="kPz-RJ-Q6n"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vAL-wb-a22" secondAttribute="trailing" constant="20" symbolic="YES" id="rUB-MM-vKj"/>
+                                    <constraint firstItem="jnw-mA-phk" firstAttribute="centerX" secondItem="R73-UO-lxP" secondAttribute="centerX" id="zaT-hK-R7X"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="R73-UO-lxP" firstAttribute="width" secondItem="z4o-6f-OoF" secondAttribute="height" multiplier="4:5" id="PGf-dd-Eg3"/>
+                            <constraint firstItem="R73-UO-lxP" firstAttribute="top" secondItem="Kta-KV-maP" secondAttribute="top" constant="80" id="d5Z-2g-qVu"/>
+                            <constraint firstItem="R73-UO-lxP" firstAttribute="centerX" secondItem="z4o-6f-OoF" secondAttribute="centerX" id="ot1-lX-woq"/>
+                            <constraint firstItem="R73-UO-lxP" firstAttribute="height" secondItem="z4o-6f-OoF" secondAttribute="height" multiplier="0.6" id="xxB-vY-Zcf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kta-KV-maP"/>
+                        <connections>
+                            <outlet property="RepScore" destination="vAL-wb-a22" id="I8t-7N-GkV"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="lblScore" destination="PfD-wU-ifd" id="qnL-kE-mu8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LRP-AT-BxD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="791" y="138"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="SHOOTER.png" width="980" height="980"/>
+        <image name="background.png" width="1600" height="900"/>
+        <image name="replay.png" width="470" height="190"/>
+    </resources>
+</document>
